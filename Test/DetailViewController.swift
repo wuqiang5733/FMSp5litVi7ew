@@ -16,6 +16,18 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Listing 16-6: Adding a Display Mode Button to the Navigation Bar of the second Detail view
+        let button = splitViewController?.displayModeButtonItem
+        navigationItem.leftBarButtonItem = button
+        /*
+         because Navigation Bars hide the Back button when
+         other buttons are present on the same side, we also have to modify the
+         leftItemsSupplementBackButton property to tell the Navigation Bar to present
+         both buttons at the same time
+         */
+        navigationItem.leftItemsSupplementBackButton = true
+        
         // Listing 16-5: Selecting the book by default
         if selected == nil && !AppData.items.isEmpty {
             selected = 0

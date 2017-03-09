@@ -30,7 +30,11 @@ class MasterViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
-            let controller = segue.destination as! DetailViewController
+//            let controller = segue.destination as! DetailViewController
+            // Listing 16-8: Referencing the Detail view through the Navigation Controller
+            let navigation = segue.destination as! UINavigationController
+            let controller = navigation.topViewController as! DetailViewController
+            
             let path = tableView.indexPathForSelectedRow
             controller.selected = path?.row
         }

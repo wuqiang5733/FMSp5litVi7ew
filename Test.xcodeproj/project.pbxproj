@@ -16,6 +16,7 @@
 		046458181E6F9705007A4D86 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046458171E6F9705007A4D86 /* MasterViewController.swift */; };
 		0464581A1E6F9831007A4D86 /* ApplicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046458191E6F9831007A4D86 /* ApplicationData.swift */; };
 		0464581C1E6F9897007A4D86 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464581B1E6F9897007A4D86 /* DetailViewController.swift */; };
+		0464581E1E70DC98007A4D86 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464581D1E70DC98007A4D86 /* EmptyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		046458171E6F9705007A4D86 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		046458191E6F9831007A4D86 /* ApplicationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationData.swift; sourceTree = "<group>"; };
 		0464581B1E6F9897007A4D86 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0464581D1E70DC98007A4D86 /* EmptyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				046457E91E6F9432007A4D86 /* AppDelegate.swift */,
 				046457ED1E6F9432007A4D86 /* Main.storyboard */,
+				0464581D1E70DC98007A4D86 /* EmptyViewController.swift */,
 				046458171E6F9705007A4D86 /* MasterViewController.swift */,
 				0464581B1E6F9897007A4D86 /* DetailViewController.swift */,
 				046458191E6F9831007A4D86 /* ApplicationData.swift */,
@@ -267,6 +270,7 @@
 			files = (
 				046457EA1E6F9432007A4D86 /* AppDelegate.swift in Sources */,
 				0464581C1E6F9897007A4D86 /* DetailViewController.swift in Sources */,
+				0464581E1E70DC98007A4D86 /* EmptyViewController.swift in Sources */,
 				0464581A1E6F9831007A4D86 /* ApplicationData.swift in Sources */,
 				046458181E6F9705007A4D86 /* MasterViewController.swift in Sources */,
 			);
