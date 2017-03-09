@@ -8,11 +8,13 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+class MasterViewController: UITableViewController , UISplitViewControllerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        splitViewController?.preferredDisplayMode = .allVisible
+        // Listing 16-9: Showing the Master view instead of the Detail view when the app is launched
+        splitViewController?.delegate = self
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,5 +48,10 @@ class MasterViewController: UITableViewController {
         if mode == .primaryOverlay {
             splitViewController?.preferredDisplayMode = .primaryHidden
         }
+    }
+    
+     // Listing 16-9: Showing the Master view instead of the Detail view when the app is launched
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        return true
     }
 }
