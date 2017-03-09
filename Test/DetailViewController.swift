@@ -16,6 +16,11 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Listing 16-5: Selecting the book by default
+        if selected == nil && !AppData.items.isEmpty {
+            selected = 0
+        }
+        
         if selected != nil {
             let file = AppData.items[selected]
             bookCover.image = UIImage(named: file)

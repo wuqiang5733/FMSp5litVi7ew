@@ -9,6 +9,33 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="kQ3-j4-wtT">
+            <objects>
+                <viewController id="k4b-6N-aBS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1iJ-WC-V5k"/>
+                        <viewControllerLayoutGuide type="bottom" id="ATG-89-Edx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F4a-NO-ub9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select a Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kB-Gd-FW4">
+                                <rect key="frame" x="135" y="156" width="105" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GHI-mB-4L1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="397.60000000000002" y="519.49025487256381"/>
+        </scene>
         <!--Detail View Controller-->
         <scene sceneID="zjO-OM-bS1">
             <objects>
@@ -50,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KcN-k8-zrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953" y="584"/>
+            <point key="canvasLocation" x="1348" y="521"/>
         </scene>
         <!--MyBooks-->
         <scene sceneID="HrB-cd-9xN">
@@ -115,7 +142,7 @@
                 <splitViewController id="GA9-LZ-ixG" sceneMemberID="viewController">
                     <connections>
                         <segue destination="e9F-CK-hTo" kind="relationship" relationship="masterViewController" id="48j-sK-hka"/>
-                        <segue destination="ZKg-x5-v2Y" kind="relationship" relationship="detailViewController" id="wzg-df-0c1"/>
+                        <segue destination="k4b-6N-aBS" kind="relationship" relationship="detailViewController" id="54V-QT-jGv"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dD-8V-eko" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -123,7 +150,4 @@
             <point key="canvasLocation" x="-553" y="123"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="wzg-df-0c1"/>
-    </inferredMetricsTieBreakers>
 </document>

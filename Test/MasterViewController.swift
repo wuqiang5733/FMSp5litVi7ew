@@ -12,7 +12,7 @@ class MasterViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        splitViewController?.preferredDisplayMode = .allVisible
+//        splitViewController?.preferredDisplayMode = .allVisible
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,6 +33,14 @@ class MasterViewController: UITableViewController {
             let controller = segue.destination as! DetailViewController
             let path = tableView.indexPathForSelectedRow
             controller.selected = path?.row
+        }
+    }
+//    Listing 16-4: Changing the mode from primaryOverlay to primaryHidden
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let mode = splitViewController?.displayMode
+        if mode == .primaryOverlay {
+            splitViewController?.preferredDisplayMode = .primaryHidden
         }
     }
 }
