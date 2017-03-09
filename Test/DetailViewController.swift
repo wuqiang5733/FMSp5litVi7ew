@@ -13,6 +13,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var bookAuthor: UILabel!
     var selected: Int!
+     var controllerHelp: UIViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,5 +49,39 @@ class DetailViewController: UIViewController {
             let controller = segue.destination as! PictureViewController
             controller.selected = selected
         }
+    }
+    // Listing 16-13: Creating a modal view from code
+    
+    @IBAction func showHelp(_ sender: Any) {
+        let label = UILabel(frame: CGRect.zero)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Press Expand to maximize the cover"
+        label.textAlignment = .center
+        label.numberOfLines = 2
+        label.font = UIFont.systemFont(ofSize: 24)
+        
+        let closeButton = UIButton(type: .system)
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        closeButton.setTitle("Close", for: .normal)
+        closeButton.addTarget(self, action: #selector(closeHelp), for: .touchUpInside)
+        
+        controllerHelp = UIViewController()
+        controllerHelp.modalPresentationStyle = .pageSheet
+        controllerHelp.view.backgroundColor = UIColor.white
+        controllerHelp.view.addSubview(label)
+        controllerHelp.view.addSubview(closeButton)
+        
+        var constraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-[mylabel]-|", options: [], metrics: nil, views: ["mylabel": label])
+        controllerHelp.view.addConstraints(constraints)
+        constraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-[mybutton]-|", options: [], metrics: nil, views: ["mybutton": closeButton])
+        controllerHelp.view.addConstraints(constraints)
+        constraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-20-[mylabel]-20-[mybutton]", options: [], metrics: nil, views: ["mylabel": label, "mybutton": closeButton])
+        controllerHelp.view.addConstraints(constraints)
+        
+        present(controllerHelp, animated: true, completion: nil)
+    }
+    
+    func closeHelp() {
+        controllerHelp.dismiss(animated: true, completion: nil)
     }
 }

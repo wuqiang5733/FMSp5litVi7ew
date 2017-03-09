@@ -79,7 +79,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YyA-zi-w9A"/>
+                    <navigationItem key="navigationItem" id="YyA-zi-w9A">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="a7y-Iy-IQ9">
+                            <connections>
+                                <action selector="showHelp:" destination="ZKg-x5-v2Y" id="I48-Xg-H3Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bookAuthor" destination="BKM-FJ-sjJ" id="I1J-6T-dgd"/>
                         <outlet property="bookCover" destination="qAR-pr-TAG" id="4f7-co-Z4I"/>
