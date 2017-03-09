@@ -53,9 +53,16 @@ class DetailViewController: UIViewController {
     // Listing 16-13: Creating a modal view from code
     
     @IBAction func showHelp(_ sender: Any) {
+        // Listing 16-15: Instantiating the view controller and presenting its view on the screen
+        let controllerHelp = HelpViewController()
+        controllerHelp.modalPresentationStyle = .pageSheet
+        present(controllerHelp, animated: true, completion: nil)
+        /*
+         // 纯粹用代码写一个页面
+         // Listing 16-13: Creating a modal view from code
         let label = UILabel(frame: CGRect.zero)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Press Expand to maximize the cover"
+        label.text = "纯粹用代码写的"
         label.textAlignment = .center
         label.numberOfLines = 2
         label.font = UIFont.systemFont(ofSize: 24)
@@ -79,6 +86,7 @@ class DetailViewController: UIViewController {
         controllerHelp.view.addConstraints(constraints)
         
         present(controllerHelp, animated: true, completion: nil)
+ */
     }
     
     func closeHelp() {

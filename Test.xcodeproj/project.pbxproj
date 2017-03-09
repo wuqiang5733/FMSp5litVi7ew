@@ -18,6 +18,8 @@
 		0464581C1E6F9897007A4D86 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464581B1E6F9897007A4D86 /* DetailViewController.swift */; };
 		0464581E1E70DC98007A4D86 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464581D1E70DC98007A4D86 /* EmptyViewController.swift */; };
 		04EF2C2C1E70F6E500E413E0 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF2C2B1E70F6E500E413E0 /* PictureViewController.swift */; };
+		04EF2C2F1E710C8200E413E0 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF2C2D1E710C8200E413E0 /* HelpViewController.swift */; };
+		04EF2C301E710C8200E413E0 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EF2C2E1E710C8200E413E0 /* HelpViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		0464581B1E6F9897007A4D86 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0464581D1E70DC98007A4D86 /* EmptyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
 		04EF2C2B1E70F6E500E413E0 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		04EF2C2D1E710C8200E413E0 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		04EF2C2E1E710C8200E413E0 /* HelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				0464581D1E70DC98007A4D86 /* EmptyViewController.swift */,
 				046458171E6F9705007A4D86 /* MasterViewController.swift */,
 				0464581B1E6F9897007A4D86 /* DetailViewController.swift */,
+				04EF2C2D1E710C8200E413E0 /* HelpViewController.swift */,
+				04EF2C2E1E710C8200E413E0 /* HelpViewController.xib */,
 				046458191E6F9831007A4D86 /* ApplicationData.swift */,
 				046457F01E6F9432007A4D86 /* Assets.xcassets */,
 				046457F21E6F9432007A4D86 /* LaunchScreen.storyboard */,
@@ -247,6 +253,7 @@
 				046457F41E6F9432007A4D86 /* LaunchScreen.storyboard in Resources */,
 				046457F11E6F9432007A4D86 /* Assets.xcassets in Resources */,
 				046457EF1E6F9432007A4D86 /* Main.storyboard in Resources */,
+				04EF2C301E710C8200E413E0 /* HelpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04EF2C2F1E710C8200E413E0 /* HelpViewController.swift in Sources */,
 				046457EA1E6F9432007A4D86 /* AppDelegate.swift in Sources */,
 				04EF2C2C1E70F6E500E413E0 /* PictureViewController.swift in Sources */,
 				0464581C1E6F9897007A4D86 /* DetailViewController.swift in Sources */,
