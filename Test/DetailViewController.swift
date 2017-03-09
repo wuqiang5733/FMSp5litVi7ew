@@ -53,10 +53,20 @@ class DetailViewController: UIViewController {
     // Listing 16-13: Creating a modal view from code
     
     @IBAction func showHelp(_ sender: Any) {
+        // 从 storyboard 当中实例化
+        // Listing 16-17: Instantiating the view from the Storyboard
+        if let story = storyboard {
+            let controllerHelp = story.instantiateViewController(withIdentifier: "helpView") as! SingleViewController
+            controllerHelp.modalPresentationStyle = .pageSheet
+            present(controllerHelp, animated: true, completion: nil)
+        }
+        /*
+         // 在 xib 当中创建
         // Listing 16-15: Instantiating the view controller and presenting its view on the screen
         let controllerHelp = HelpViewController()
         controllerHelp.modalPresentationStyle = .pageSheet
         present(controllerHelp, animated: true, completion: nil)
+ */
         /*
          // 纯粹用代码写一个页面
          // Listing 16-13: Creating a modal view from code

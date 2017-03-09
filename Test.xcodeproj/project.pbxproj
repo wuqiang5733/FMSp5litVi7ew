@@ -20,6 +20,7 @@
 		04EF2C2C1E70F6E500E413E0 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF2C2B1E70F6E500E413E0 /* PictureViewController.swift */; };
 		04EF2C2F1E710C8200E413E0 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF2C2D1E710C8200E413E0 /* HelpViewController.swift */; };
 		04EF2C301E710C8200E413E0 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EF2C2E1E710C8200E413E0 /* HelpViewController.xib */; };
+		04EF2C321E71109900E413E0 /* SingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF2C311E71109900E413E0 /* SingleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		04EF2C2B1E70F6E500E413E0 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		04EF2C2D1E710C8200E413E0 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		04EF2C2E1E710C8200E413E0 /* HelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
+		04EF2C311E71109900E413E0 /* SingleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				046457E91E6F9432007A4D86 /* AppDelegate.swift */,
 				046457ED1E6F9432007A4D86 /* Main.storyboard */,
+				04EF2C311E71109900E413E0 /* SingleViewController.swift */,
 				04EF2C2B1E70F6E500E413E0 /* PictureViewController.swift */,
 				0464581D1E70DC98007A4D86 /* EmptyViewController.swift */,
 				046458171E6F9705007A4D86 /* MasterViewController.swift */,
@@ -284,6 +287,7 @@
 				0464581C1E6F9897007A4D86 /* DetailViewController.swift in Sources */,
 				0464581E1E70DC98007A4D86 /* EmptyViewController.swift in Sources */,
 				0464581A1E6F9831007A4D86 /* ApplicationData.swift in Sources */,
+				04EF2C321E71109900E413E0 /* SingleViewController.swift in Sources */,
 				046458181E6F9705007A4D86 /* MasterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
