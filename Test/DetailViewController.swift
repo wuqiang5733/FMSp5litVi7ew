@@ -42,4 +42,11 @@ class DetailViewController: UIViewController {
             }
         }
     }
+    // Listing 16-10: Sending the index of the selected book to PictureViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPicture" {
+            let controller = segue.destination as! PictureViewController
+            controller.selected = selected
+        }
+    }
 }
