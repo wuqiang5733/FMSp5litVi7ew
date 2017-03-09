@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -72,7 +73,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Expand"/>
                                 <connections>
-                                    <segue destination="I4S-tJ-D5b" kind="show" identifier="showPicture" id="LlV-gp-W9D"/>
+                                    <segue destination="I4S-tJ-D5b" kind="presentation" identifier="showPicture" modalPresentationStyle="pageSheet" id="LlV-gp-W9D"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -101,12 +102,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uhn-0Z-5eM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uhn-0Z-5eM">
                                 <rect key="frame" x="16" y="72" width="343" height="575"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Pn-Rc-4Br">
+                                <rect key="frame" x="317" y="20" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closePicture:" destination="I4S-tJ-D5b" eventType="touchUpInside" id="FZc-f2-cAO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uhn-0Z-5eM" firstAttribute="trailing" secondItem="hbU-tV-t3C" secondAttribute="trailingMargin" id="0KT-oe-zC5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Pn-Rc-4Br" secondAttribute="trailing" constant="3" id="GAr-Sp-EZh"/>
+                            <constraint firstItem="uhn-0Z-5eM" firstAttribute="leading" secondItem="hbU-tV-t3C" secondAttribute="leadingMargin" id="HB7-xy-Mcg"/>
+                            <constraint firstItem="xdF-BT-G3F" firstAttribute="top" secondItem="uhn-0Z-5eM" secondAttribute="bottom" constant="20" id="MdM-94-kTN"/>
+                            <constraint firstItem="uhn-0Z-5eM" firstAttribute="top" secondItem="0Pn-Rc-4Br" secondAttribute="bottom" constant="22" id="UcD-k5-B0K"/>
+                            <constraint firstItem="0Pn-Rc-4Br" firstAttribute="top" secondItem="hbU-tV-t3C" secondAttribute="top" constant="20" symbolic="YES" id="mjo-Cs-gfL"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="bookCover" destination="uhn-0Z-5eM" id="Hd7-q8-jln"/>

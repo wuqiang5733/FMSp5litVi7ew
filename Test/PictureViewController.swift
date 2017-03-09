@@ -19,4 +19,9 @@ class PictureViewController: UIViewController {
             bookCover.image = UIImage(named: file)
         }
     }
+    // Listing 16-12: Dismissing a modal view programmatically
+    
+    @IBAction func closePicture(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
