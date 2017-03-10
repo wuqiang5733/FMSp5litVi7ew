@@ -76,6 +76,16 @@
                                     <segue destination="I4S-tJ-D5b" kind="presentation" identifier="showPicture" modalPresentationStyle="pageSheet" id="LlV-gp-W9D"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I56-2y-kVK">
+                                <rect key="frame" x="154" y="222" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Total Books"/>
+                                <connections>
+                                    <segue destination="tXR-GI-a7y" kind="popoverPresentation" identifier="showPopover" popoverAnchorView="I56-2y-kVK" id="qra-ti-LDu">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -95,6 +105,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KcN-k8-zrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1348" y="1290"/>
+        </scene>
+        <!--Popover View Controller-->
+        <scene sceneID="46K-4Q-wte">
+            <objects>
+                <viewController id="tXR-GI-a7y" customClass="PopoverViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Xp-09-zfe"/>
+                        <viewControllerLayoutGuide type="bottom" id="wu6-eD-OT5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jra-QS-x9x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTg-m8-JFb">
+                                <rect key="frame" x="166.5" y="38" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KTg-m8-JFb" firstAttribute="centerX" secondItem="Jra-QS-x9x" secondAttribute="centerX" id="22J-uc-5Lg"/>
+                            <constraint firstItem="KTg-m8-JFb" firstAttribute="top" secondItem="9Xp-09-zfe" secondAttribute="bottom" constant="18" id="Bpg-6C-IQ9"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="100"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="KTg-m8-JFb" id="4ir-P0-2ph"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kvU-YF-FHr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1348" y="1833.2833583208396"/>
         </scene>
         <!--Picture View Controller-->
         <scene sceneID="6AZ-xD-uOd">
@@ -150,11 +195,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sxw-OT-aOT" id="nak-C0-9te">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dTz-ez-zt6">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>

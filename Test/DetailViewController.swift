@@ -50,6 +50,18 @@ class DetailViewController: UIViewController, UIAdaptivePresentationControllerDe
         if segue.identifier == "showPicture" {
             let controller = segue.destination as! PictureViewController
             controller.selected = selected
+            // Listing 16-20: Preparing the popover
+        }else if segue.identifier == "showPopover" {
+            let controller = segue.destination as! PopoverViewController
+            controller.selected = selected
+            
+            // Listing 16-22: Moving the anchor point
+            let presentation = controller.presentationController as! UIPopoverPresentationController
+            let frame = presentation.sourceView?.bounds
+            presentation.sourceRect = frame!
+            
+            // Listing 16-23: Assigning the delegate
+            controller.presentationController?.delegate = controller
         }
     }
     // Listing 16-13: Creating a modal view from code
