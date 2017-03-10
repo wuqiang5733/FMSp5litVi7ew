@@ -8,7 +8,9 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+// class DetailViewController: UIViewController {
+    // Listing 16-19: Showing an alternative modal view
+class DetailViewController: UIViewController, UIAdaptivePresentationControllerDelegate {
     @IBOutlet weak var bookCover: UIImageView!
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var bookAuthor: UILabel!
@@ -57,7 +59,19 @@ class DetailViewController: UIViewController {
         // Listing 16-17: Instantiating the view from the Storyboard
         if let story = storyboard {
             let controllerHelp = story.instantiateViewController(withIdentifier: "helpView") as! SingleViewController
-            controllerHelp.modalPresentationStyle = .pageSheet
+            // Listing 16-19: Showing an alternative modal view
+            // controllerHelp.modalPresentationStyle = .pageSheet
+            
+            controllerHelp.modalPresentationStyle = .formSheet
+            /*
+             当一个modal view 被创建并且呈现时，
+             一个 UIPresentationController类的对象
+             被自动创建来管理呈现，它会被赋于给正在呈现 modal View 的 View Controller 的叫作
+             presentationController的属性，通过这个属性，我们可以访问这个对象，并且阅读它当前的配置。
+             */
+            let presentation = controllerHelp.presentationController
+            presentation?.delegate = self
+            
             present(controllerHelp, animated: true, completion: nil)
         }
         /*
@@ -101,5 +115,33 @@ class DetailViewController: UIViewController {
     
     func closeHelp() {
         controllerHelp.dismiss(animated: true, completion: nil)
+    }
+    
+     // Listing 16-17: Instantiating the view from the Storyboard
+     // Portrait 模式下是有 Visual Effect 效果的
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        /*
+         —This
+         method is called on the delegate to know the presentation style to use when the
+         horizontal Size Class becomes compact.
+         */
+        print("WQ_adaptivePresentationStyle")
+        return .overFullScreen
+    }
+    func presentationController(_ controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
+        /*
+         —This method is called on the delegate to get the
+         view controller to present for the style determined by the second attribute. The
+         method is used to assign a different view to each presentation style.
+         */
+        // 就是在 水平方向上是 compact 时，载入这个 view Controller
+        var controller: iPhoneViewController!
+        if style == .overFullScreen {
+            if let story = storyboard {
+                controller = story.instantiateViewController(withIdentifier: "iPhoneView") as! iPhoneViewController
+            }
+        }
+        print("WQ_presentationController")
+        return controller
     }
 }

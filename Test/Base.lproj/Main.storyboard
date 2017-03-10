@@ -150,11 +150,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sxw-OT-aOT" id="nak-C0-9te">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dTz-ez-zt6">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -177,6 +177,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSR-lW-y3J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1349" y="-203"/>
+        </scene>
+        <!--iPhone View Controller-->
+        <scene sceneID="5Ab-3c-rd7">
+            <objects>
+                <viewController storyboardIdentifier="iPhoneView" id="6tD-xY-ZSd" customClass="iPhoneViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z0U-AU-DZt"/>
+                        <viewControllerLayoutGuide type="bottom" id="VsY-Xg-jY9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YIn-K4-NMz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E2t-1H-PLc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gdV-CW-hY6">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visual Effect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5t-0q-Xv4">
+                                            <rect key="frame" x="139" y="68" width="96" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzU-ss-Wtp">
+                                            <rect key="frame" x="168" y="135" width="39" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Close"/>
+                                            <connections>
+                                                <action selector="closeHelp:" destination="6tD-xY-ZSd" eventType="touchUpInside" id="zhy-tb-a9l"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="R5t-0q-Xv4" secondAttribute="trailing" constant="140" id="HgA-Qs-Jsx"/>
+                                        <constraint firstItem="R5t-0q-Xv4" firstAttribute="top" secondItem="gdV-CW-hY6" secondAttribute="top" constant="68" id="OR9-2R-vuG"/>
+                                        <constraint firstItem="R5t-0q-Xv4" firstAttribute="leading" secondItem="gdV-CW-hY6" secondAttribute="leading" constant="139" id="s4a-je-4Mf"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E2t-1H-PLc" firstAttribute="leading" secondItem="YIn-K4-NMz" secondAttribute="leading" id="Ros-pS-RJG"/>
+                            <constraint firstItem="VsY-Xg-jY9" firstAttribute="top" secondItem="E2t-1H-PLc" secondAttribute="bottom" id="ajy-KJ-wBh"/>
+                            <constraint firstItem="E2t-1H-PLc" firstAttribute="top" secondItem="YIn-K4-NMz" secondAttribute="top" id="uVH-X1-qPJ"/>
+                            <constraint firstAttribute="trailing" secondItem="E2t-1H-PLc" secondAttribute="trailing" id="wcy-iS-0E8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nLn-gV-CS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2152.8000000000002" y="-204.64767616191907"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jkL-4n-sbZ">
